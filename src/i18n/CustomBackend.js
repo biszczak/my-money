@@ -1,4 +1,4 @@
-import Backend from 'i18next-xhr-backend'
+import Backend from 'i18next-xhr-backend';
 
 class CustomBackend extends Backend {
     constructor(services, options = {}) {

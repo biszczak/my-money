@@ -13,7 +13,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const token = '5cbfc1a07c064ea2a25f35f099fa1c3d';
 const id = '347415';
 
-console.log(token)
+// console.log(token)
 
 i18n
     .use(CustomBackend)
@@ -25,11 +25,12 @@ i18n
         fallbackLng: 'en',
         debug: true,
         saveMissing: true,
+        // keySeparator: ".",
 
         backend: {
             loadPath: 'https://cors-anywhere.herokuapp.com/https://api.poeditor.com/v2/terms/list',
             addPath: 'https://cors-anywhere.herokuapp.com/https://api.poeditor.com/v2/terms/add',
-            corssDomain: true,
+            crossDomain: true,
             parse: data => {
                 const parsedData = JSON.parse(data);
                 const terms = parsedData.result.terms.reduce((acc, item) => {
