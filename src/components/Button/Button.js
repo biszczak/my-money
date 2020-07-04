@@ -35,7 +35,7 @@ function Button({ variant, children, ...props }) {
         )
 }
 
-Button.protoTypes = {
+Button.propTypes = {
     variant: PropTypes.oneOf(['inline', 'regular'])
 }
 
