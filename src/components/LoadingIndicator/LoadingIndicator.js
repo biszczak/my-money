@@ -28,16 +28,16 @@ const Content = styled.div`
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.colors.grey.normal};
+  background: ${({ theme }) => theme.colors.gray.normal};
   animation: ${flip} 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 `
 
 function LoadingIndicator() {
-    return (
-        <Root>
-            <Content />
-        </Root>
-    )
+  return (
+    <Root>
+      <Content />
+    </Root>
+  )
 }
 
 export default LoadingIndicator;

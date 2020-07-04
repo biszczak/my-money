@@ -5,7 +5,7 @@ export default {
         xl: 20
     },
     colors: {
-        grey: {
+        gray: {
             light: 'rgb(238, 238, 238)',
             normal: 'rgb(222,220,220)',
             dark: 'rgb(212, 212, 212'
@@ -17,7 +17,7 @@ export default {
             normal: 'rgb(165,61,54)'
         },
         pink: {
-            normal: 'rgb(219,112,147'
+            normal: 'rgb(219,112,147)'
         }
     }
 }

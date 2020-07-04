@@ -2,7 +2,7 @@ import Backend from 'i18next-xhr-backend';
 
 class CustomBackend extends Backend {
     constructor(services, options = {}) {
-        super(services, options)
+        super(services, options);
     }
 
     read(language, namespace, callback) {
