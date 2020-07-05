@@ -1,50 +1,24 @@
 import {
-    BUDGET_GET_REQUEST,
-    BUDGET_GET_SUCCESS,
-    BUDGET_GET_FAILURE,
-
-    BUDGETED_CATEGORIES_GET_REQUEST,
-    BUDGETED_CATEGORIES_GET_SUCCESS,
-    BUDGETED_CATEGORIES_GET_FAILURE,
+    BUDGET_GET,
+    BUDGETED_CATEGORIES_GET,
 } from 'data/constants';
 
 import API from 'data/fetch';
 
-export const fetchBudget = (id) => async (dispatch) => {
-    //dispatch BUDGET_GET_REQUEST action
-    dispatch({
-        type: BUDGET_GET_REQUEST
-    })
-    //do request to API
-    try {
-        const response = await API.budget.fetchBudget(id);
-        const data = await response.json();
-        dispatch({
-            type: BUDGET_GET_SUCCESS,
-            payload: data,
-        })
-    } catch (error) {
-        dispatch({
-            type: BUDGET_GET_FAILURE,
-        })
+export const fetchBudget = (id) => {
+    const promise = API.budget.fetchBudget(id);
+
+    return {
+        type: BUDGET_GET,
+        promise,
     }
-    //dispatch BUDGET_GET_SUCCESS action and pass data from request
 }
 
-export const fetchBudgetedCategories = (id) => async (dispatch) => {
-    dispatch({
-        type: BUDGETED_CATEGORIES_GET_REQUEST
-    })
-    try {
-        const response = await API.budget.fetchBudgetedCategories(id);
-        const data = await response.json();
-        dispatch({
-            type: BUDGETED_CATEGORIES_GET_SUCCESS,
-            payload: data,
-        })
-    } catch (error) {
-        dispatch({
-            type: BUDGETED_CATEGORIES_GET_FAILURE,
-        })
+export const fetchBudgetedCategories = (id) => {
+    const promise = API.budget.fetchBudgetedCategories(id);
+
+    return {
+        type: BUDGETED_CATEGORIES_GET,
+        promise,
     }
 }
