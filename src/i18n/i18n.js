@@ -7,11 +7,9 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // require('dotenv').config();
 // console.log(process.env)
 
-// const token = process.env.API_TOKEN;
-// const id = process.env.PROJECT_ID;
+const token = `${process.env.REACT_APP_API_TOKEN}`;
+const id = `${process.env.REACT_APP_PROJECT_ID}`;
 
-const token = '5cbfc1a07c064ea2a25f35f099fa1c3d';
-const id = '347415';
 
 // console.log(token)
 
