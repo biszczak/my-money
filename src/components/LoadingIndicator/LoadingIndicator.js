@@ -20,6 +20,9 @@ const flip = keyframes`
 const Root = styled.div`
  display: inline-block;
  transform: translateZ(1px);
+ position: absolute;
+ margin-left: calc(50% - 45px);
+ margin-top: 120px;
 `
 
 const Content = styled.div`
@@ -28,7 +31,7 @@ const Content = styled.div`
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.colors.gray.normal};
+  background: ${({ theme }) => theme.colors.black.normal};
   animation: ${flip} 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 `
 

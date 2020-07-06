@@ -13,6 +13,7 @@ import theme from 'utils/theme';
 
 import { Navigation, Wrapper, LoadingIndicator, Button } from 'components';
 import Budget from 'pages/Budget';
+import Homepage from 'pages/Homepage';
 
 
 function App({ budget, fetchBudget, fetchBudgetedCategories }) {
@@ -36,8 +37,8 @@ function App({ budget, fetchBudget, fetchBudgetedCategories }) {
         <Wrapper>
           <Switch>
             <Route exact path='/'>
-              Homepage
-          </Route>
+              <Homepage />
+            </Route>
             <Route path='/budget'>
               <Budget />
             </Route>

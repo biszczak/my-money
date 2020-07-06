@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const RootButton = styled.button`
-color: ${({ theme: { colors }, primary }) => primary ? colors.gray.light : colors.pink.normal};
+color: ${({ theme: { colors }, primary }) => primary ? colors.gray.light : colors.white.normal};
   cursor: inherit;
   border: none;
   background-color: transparent;
@@ -14,14 +14,14 @@ color: ${({ theme: { colors }, primary }) => primary ? colors.gray.light : color
 
 export const InlineButton = styled(RootButton)`
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 `;
 
 export const RegularButton = styled(RootButton)`
-  background: ${({ theme, primary }) => primary ? theme.colors.pink.normal : theme.colors.gray.light};
+  background-color: transparent;
   margin: ${({ theme }) => `${theme.spacing.xs / 2}px`};
   padding: ${({ theme }) => `${theme.spacing.xs / 2}px ${theme.spacing.xs}px`};
-  border: ${({ theme }) => `2px solid ${theme.colors.pink.normal}`};
-  border-radius: 3px;
+  border: ${({ theme }) => `2px solid ${theme.colors.white.normal}`};
+  border-radius: 5px;
 `;
