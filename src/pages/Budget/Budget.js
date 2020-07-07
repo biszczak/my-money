@@ -8,6 +8,7 @@ import { LoadingIndicator } from '../../components';
 import { Grid } from './Budget.css';
 
 import BudgetCategoryList from 'pages/Budget/components/BudgetCategoryList';
+import BudgetTransactionsList from 'pages/Budget/components/BudgetTransactionList';
 
 
 
@@ -26,13 +27,13 @@ function Budget({
     return (
         <Grid>
             <section>
-                {isLoaded ? <BudgetCategoryList></BudgetCategoryList> : (
-                    <LoadingIndicator></LoadingIndicator>
+                {isLoaded ? <BudgetCategoryList /> : (
+                    <LoadingIndicator />
                 )}
             </section>
             <section>
-                {isLoaded ? 'Transactions list' : (
-                    <LoadingIndicator></LoadingIndicator>
+                {isLoaded ? <BudgetTransactionsList /> : (
+                    <LoadingIndicator />
                 )}
             </section>
         </Grid>

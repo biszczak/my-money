@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Category = styled.div`
+@import url('${({ theme }) => theme.fonts.familyFont.import}');
+font-family: ${({ theme }) => theme.fonts.familyFont.name};
 border: 1px solid ${({ theme }) => theme.colors.gray.dark};
 padding: ${({ theme }) => theme.spacing.xs}px;
 display: flex;
@@ -14,3 +16,8 @@ background-color: ${({ theme }) => theme.colors.gray.normal};
 export const CategoryItem = styled(Category)`
 background-color: ${({ theme }) => theme.colors.gray.light};
 `;
+
+export const CategoryAmount = styled.span`
+font-weight: 500;
+color: ${({ theme, negative }) => negative ? theme.colors.red.normal : theme.colors.green.normal};
+`
