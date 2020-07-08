@@ -1,19 +1,53 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { connect } from 'react-redux';
 import { groupBy } from 'lodash';
 
 import { formatCurrency, formatDate } from 'utils';
 
 import { List, ListItem } from './BudgetTransactionList.css';
-import { Category } from '../BudgetCategoryList/BudgetCategoryList.css';
 
-function BudgetTransactionList({ transactions, allCategories }) {
-    const groupedTransactions = groupBy(
-        transactions,
-        transaction => new Date(transaction.date).getUTCDate()
-    )
+function BudgetTransactionList({
+    transactions, allCategories, budgetedCategories, selectedParentCategoryId
+}) {
+    const filteredTransactionsBySelectedParentCategory = useMemo(
+        () => {
+            if (typeof selectedParentCategoryId === 'undefined') {
+                return transactions;
+            }
 
-    console.log({ groupedTransactions })
+            if (selectedParentCategoryId === null) {
+                return transactions.filter(transaction => {
+                    const hasBudgetedCategory = budgetedCategories
+                        .some(budgetedCategory => budgetedCategory.categoryId === transaction.categoryId);
+
+                    return !hasBudgetedCategory;
+                })
+            }
+
+            return transactions
+                .filter(transaction => {
+                    try {
+                        const category = allCategories
+                            .find(category => category.id === transaction.categoryId);
+                        const parentCategoryName = category.parentCategory.name;
+
+                        return parentCategoryName === selectedParentCategoryId;
+
+                    } catch (error) {
+                        return false;
+                    }
+                })
+        },
+        [transactions, allCategories, budgetedCategories, selectedParentCategoryId]
+    );
+
+    const groupedTransactions = useMemo(
+        () => groupBy(
+            filteredTransactionsBySelectedParentCategory,
+            transaction => new Date(transaction.date).getUTCDate()
+        ),
+        [filteredTransactionsBySelectedParentCategory]
+    );
 
     return (
         <List>
@@ -39,5 +73,7 @@ function BudgetTransactionList({ transactions, allCategories }) {
 
 export default connect(state => ({
     transactions: state.budget.budget.transactions,
+    budgetedCategories: state.budget.budgetedCategories,
     allCategories: state.common.allCategories,
+    selectedParentCategoryId: state.budget.selectedParentCategoryId,
 }))(BudgetTransactionList);
