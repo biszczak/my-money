@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import { connect } from 'react-redux';
 import { groupBy } from 'lodash';
+import { CategoryIcon } from 'components';
 
 import { formatCurrency, formatDate } from 'utils';
 
@@ -48,20 +49,45 @@ function BudgetTransactionList({
         ),
         [filteredTransactionsBySelectedParentCategory]
     );
-
+    console.log(allCategories)
     return (
         <List>
+            <h3>Transactions</h3>
             {Object.entries(groupedTransactions).map(([keyBy, transactions]) => (
                 <li>
                     <ul>
                         {transactions.map(transaction => (
                             <ListItem>
-                                <div>{transaction.description}</div>
+                                <div>
+                                    <CategoryIcon
+                                        parentCategoryId={allCategories.map(category => {
+                                            let parentId = null;
+                                            // console.log(transaction)
+                                            if (category.id === transaction.categoryId) {
+                                                parentId = category.parentCategoryId
+                                            }
+                                            return parentId
+                                        })}
+                                        name={(allCategories.find(category => category.id === transaction.categoryId) || {}).name} />
+                                    <div>
+                                        <div>{transaction.description}</div>
+                                        <div>{formatDate(transaction.date)}</div>
+                                    </div>
+                                </div>
                                 <div>{formatCurrency(transaction.amount)}</div>
-                                <div>{formatDate(transaction.date)}</div>
+
+                                {/* <div>
+                                    {allCategories.map(category => {
+                                        let parentId = null;
+                                        if (category.id === transaction.categoryId) {
+                                            parentId = category.parentCategoryId
+                                        }
+                                        return parentId;
+                                    })}
+                                </div>
                                 <div>
                                     {(allCategories.find(category => category.id === transaction.categoryId) || {}).name}
-                                </div>
+                                </div> */}
                             </ListItem>
                         ))}
                     </ul>

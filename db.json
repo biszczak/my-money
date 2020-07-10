@@ -9,6 +9,10 @@
       "name": "Bills and utilities"
     },
     {
+      "id": "3",
+      "name": "Holidays"
+    },
+    {
       "id": "4",
       "name": "Education"
     },
@@ -50,11 +54,16 @@
     },
     {
       "id": "7",
+      "name": "Fuel",
+      "parentCategoryId": "1"
+    },
+    {
+      "id": "8",
       "name": "Udemy course",
       "parentCategoryId": "4"
     },
     {
-      "id": "8",
+      "id": "9",
       "name": "Restaurants and pubs",
       "parentCategoryId": "5"
     }
@@ -100,7 +109,7 @@
   "budgets": [
     {
       "id": "1",
-      "name": "April",
+      "name": "Wallet",
       "totalAmount": 2400
     }
   ],

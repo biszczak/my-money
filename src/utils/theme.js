@@ -33,3 +33,15 @@ export default {
         }
     }
 }
+
+export const iconsColors = {
+    icons: {
+        colors: {
+            1: "RGBA(145, 169, 255, ",
+            2: "RGBA(255, 128, 197, ",
+            3: "RGBA(254, 158, 159, ",
+            4: "RGBA(139, 255, 156, ",
+            5: "RGBA(122, 251, 255, ",
+        }
+    }
+}

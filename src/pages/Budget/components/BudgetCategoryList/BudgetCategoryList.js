@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useCallback } from 'react';
+import React, { useRef, useMemo, useCallback, Fragment } from 'react';
 import { connect } from 'react-redux';
 import 'styled-components/macro';
 import { groupBy } from 'lodash';
@@ -48,23 +48,25 @@ function BudgetCategoryList({
                     }}
                     categories={categories}
                     transactions={budget.transactions}
+                // id={parentName.id}
                 />
             ),
             children: categories.map(budgetedCategory => {
-                const { name } = allCategories.find(category => category.id === budgetedCategory.categoryId);
-
+                const { name, parentCategoryId } = allCategories.find(category => category.id === budgetedCategory.categoryId);
                 return (
                     <CategoryItem
                         key={budgetedCategory.id}
                         name={name}
                         item={budgetedCategory}
                         transactions={budget.transactions}
+                        parentCategoryId={parentCategoryId}
                     />
                 )
             }),
         })),
         [allCategories, budget.transactions, budgetedCategoriesByParent, selectParentCategory]
     );
+
 
     const totalSpent = useMemo(() =>
         budget.transactions
@@ -108,35 +110,34 @@ function BudgetCategoryList({
     );
 
     return (
-        <div>
+        <Fragment>
+            <h3>Categories</h3>
             <div
                 css={`
-                border-bottom: 5px solid ${({ theme }) => theme.colors.white.normal}
+            display: flex;
             `}
             >
-                <ParentCategory
-                    name={budget.name}
-                    amount={restToSpent}
-                    onClick={handleClearParentCategorySelect}
-                />
-            </div>
-            <ToggleableList
-                items={listItems}
-                clickRef={handleClickParentCategoryRef}
-            />
-            <div
-                css={`
-                border-top: 5px solid ${({ theme }) => theme.colors.white.normal}
-            `}
-            >
-                <ParentCategory
-                    name={t('Other categories')}
-                    amount={availableForRestCategories}
-                    onClick={handleSelectRestParentCategories}
-                />
-            </div>
+                <div>
+                    <ParentCategory
+                        name={budget.name}
+                        amount={restToSpent}
+                        onClick={handleClearParentCategorySelect}
 
-        </div>
+                    />
+                </div>
+                <ToggleableList
+                    items={listItems}
+                    clickRef={handleClickParentCategoryRef}
+                />
+                <div>
+                    <ParentCategory
+                        name={t('Other categories')}
+                        amount={availableForRestCategories}
+                        onClick={handleSelectRestParentCategories}
+                    />
+                </div>
+            </div>
+        </Fragment>
     )
 }
 

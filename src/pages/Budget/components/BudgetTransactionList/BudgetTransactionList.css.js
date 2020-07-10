@@ -6,26 +6,32 @@ export const List = styled.ul`
   }
 
   li {
-    margin: 0;
+    margin: 0 !important;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
   }
 `;
 
 export const ListItem = styled.li`
   border: 1px solid ${({ theme }) => theme.colors.gray.dark};
-  padding: ${({ theme }) => theme.spacing.xs}px;
+  padding: ${({ theme }) => theme.spacing.xl}px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
 
-  > *:nth-child(1) {
-    flex: 4;
-  }
-  > *:nth-child(2) {
-    flex: 2;
-  }
-  > *:nth-child(3) {
-    flex: 3;
-  }
-  > *:nth-child(4) {
-    flex: 1;
+  div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    div.iconContainer {
+      width: 32px;
+      height: 32px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      margin-right: 20px;
+    }
   }
 `;

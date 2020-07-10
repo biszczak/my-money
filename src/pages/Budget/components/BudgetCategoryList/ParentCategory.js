@@ -3,6 +3,8 @@ import React, { useMemo } from 'react';
 import { ParentCategory as Root, CategoryAmount } from './BudgetCategoryList.css';
 import { formatCurrency } from 'utils';
 
+import { FaBeer } from 'react-icons/fa';
+
 function ParentCategory({ name, onClick, categories, transactions, amount }) {
     const categoryLeftValue = useMemo(() => {
         if (!!amount) return null;
@@ -33,10 +35,12 @@ function ParentCategory({ name, onClick, categories, transactions, amount }) {
 
     return (
         <Root onClick={onClick}>
-            <span>{name}</span>
-            <CategoryAmount negative={amountValue < 0}>
-                {formatCurrency(amountValue)}
-            </CategoryAmount>
+            <div className='description'>
+                <span>{name}</span>
+                <CategoryAmount negative={amountValue < 0}>
+                    {formatCurrency(amountValue)}
+                </CategoryAmount>
+            </div>
         </Root>
     )
 }

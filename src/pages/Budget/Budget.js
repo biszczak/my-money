@@ -33,7 +33,8 @@ function Budget({
             </section>
             <section>
                 {isLoaded ? <BudgetTransactionsList /> : (
-                    <LoadingIndicator />
+                    // <LoadingIndicator />
+                    null
                 )}
             </section>
         </Grid>

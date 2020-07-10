@@ -1,9 +1,20 @@
 import React, { Fragment, useState, useEffect } from 'react';
 
+import 'styled-components/macro';
+
 const Item = ({ item, onClickHandler, isActive }) => (
     <div>
         <item.Trigger onClick={onClickHandler} />
-        {isActive && item.children}
+        <div
+            css={`
+            position: absolute;
+            display: flex;
+            left: 0;
+        `}
+        >
+            {isActive && item.children}
+        </div>
+
     </div>
 )
 
