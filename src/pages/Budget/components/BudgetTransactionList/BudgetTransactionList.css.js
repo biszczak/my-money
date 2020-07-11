@@ -34,4 +34,8 @@ export const ListItem = styled.li`
       margin-right: 20px;
     }
   }
+
+  div.date {
+    font-size: 14px;
+  }
 `;

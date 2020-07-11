@@ -71,7 +71,7 @@ function BudgetTransactionList({
                                         name={(allCategories.find(category => category.id === transaction.categoryId) || {}).name} />
                                     <div>
                                         <div>{transaction.description}</div>
-                                        <div>{formatDate(transaction.date)}</div>
+                                        <div className='date'>{formatDate(transaction.date)}</div>
                                     </div>
                                 </div>
                                 <div>{formatCurrency(transaction.amount)}</div>

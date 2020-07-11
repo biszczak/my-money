@@ -20,10 +20,10 @@ export default {
             dark: 'rgb(212, 212, 212)'
         },
         green: {
-            normal: 'rgb(85, 150, 0)'
+            normal: 'rgb(106, 235, 44)'
         },
         red: {
-            normal: 'rgb(165,61,54)'
+            normal: 'rgb(254, 36, 24)'
         },
         pink: {
             normal: 'rgb(255, 79, 90)'

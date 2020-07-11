@@ -115,6 +115,9 @@ function BudgetCategoryList({
             <div
                 css={`
             display: flex;
+            @media (max-width: 768px) {
+                flex-direction: column;
+              }
             `}
             >
                 <div>

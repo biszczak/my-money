@@ -53,4 +53,5 @@ div.content {
 export const CategoryAmount = styled.span`
 font-weight: 400;
 color: ${({ theme, negative }) => negative ? theme.colors.red.normal : theme.colors.green.normal};
+font-size: 14px;
 `

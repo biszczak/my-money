@@ -20,6 +20,6 @@ section:nth-child(1) {
 
 section:nth-child(2) {
     position: relative;
-    margin-top: 47px;
+    margin-top: 60px;
 }
 `

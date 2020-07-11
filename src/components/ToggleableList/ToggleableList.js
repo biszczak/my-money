@@ -10,6 +10,12 @@ const Item = ({ item, onClickHandler, isActive }) => (
             position: absolute;
             display: flex;
             left: 0;
+            margin-top: 10px;
+            @media (max-width: 768px) {
+                flex-direction: column;
+                position: static;
+                margin-bottom: 10px;
+              }
         `}
         >
             {isActive && item.children}
