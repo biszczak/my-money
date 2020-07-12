@@ -49,15 +49,14 @@ function BudgetTransactionList({
         ),
         [filteredTransactionsBySelectedParentCategory]
     );
-    console.log(allCategories)
     return (
         <List>
             <h3>Transactions</h3>
-            {Object.entries(groupedTransactions).map(([keyBy, transactions]) => (
-                <li>
+            {Object.entries(groupedTransactions).map(([key, transactions]) => (
+                <li key={key}>
                     <ul>
                         {transactions.map(transaction => (
-                            <ListItem>
+                            <ListItem key={transaction.id}>
                                 <div>
                                     <CategoryIcon
                                         parentCategoryId={allCategories.map(category => {

@@ -16,7 +16,6 @@ import { iconsColors } from 'utils/theme';
 function CategoryIcon({ name, parentCategoryId }) {
 
     let icon = null;
-    console.log(typeof parentCategoryId);
     if (typeof parentCategoryId === 'object') {
         let realParentId;
         parentCategoryId.forEach(item => {

@@ -15,7 +15,7 @@ transition: .3s ease-in-out;
 cursor: pointer;
 margin-right: ${({ theme }) => theme.spacing.xl}px;
 font-weight: 400;
-border-bottom: 3px solid ${({ theme }) => theme.colors.white.normal};
+
 
 .description {
 display: flex;
@@ -23,7 +23,7 @@ flex-direction: column;
 }
 
 &:hover {
-    border-bottom: 3px solid ${({ theme }) => theme.colors.pink.normal};
+    background-color:${({ theme }) => theme.colors.pink.light};
 }
 `
 

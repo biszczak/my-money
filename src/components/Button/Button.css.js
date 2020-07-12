@@ -25,3 +25,11 @@ export const RegularButton = styled(RootButton)`
   border: ${({ theme }) => `2px solid ${theme.colors.white.normal}`};
   border-radius: 5px;
 `;
+
+export const RegularButtonColor = styled(RegularButton)`
+border: ${({ theme }) => `2px solid ${theme.colors.pink.normal}`};
+background-color: ${({ theme }) => `${theme.colors.pink.normal}`};
+border-radius: 21px;
+padding: 10px 10px;
+front-weight: 300;
+`;

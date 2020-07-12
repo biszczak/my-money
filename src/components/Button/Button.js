@@ -2,7 +2,7 @@ import React, { Fragment, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { InlineButton, RegularButton } from './Button.css';
+import { InlineButton, RegularButton, RegularButtonColor } from './Button.css';
 
 function Button({ variant, children, ...props }) {
     const { to } = props;
@@ -12,6 +12,8 @@ function Button({ variant, children, ...props }) {
                 return InlineButton
             case 'regular':
                 return RegularButton
+            case 'regular-color':
+                return RegularButtonColor
 
             default:
                 return RegularButton
@@ -36,7 +38,7 @@ function Button({ variant, children, ...props }) {
 }
 
 Button.propTypes = {
-    variant: PropTypes.oneOf(['inline', 'regular'])
+    variant: PropTypes.oneOf(['inline', 'regular', 'regular-color'])
 }
 
 export default Button;
