@@ -195,44 +195,44 @@
       "id": "M9B9puJ"
     },
     {
-      "description": "Nowa transakcja3",
-      "amount": 10.5,
-      "categoryId": "3",
-      "date": "2020-02-19",
+      "description": "dsadsad",
+      "amount": 222,
+      "categoryId": "9",
+      "date": "2020-07-13",
       "budgetId": "1",
-      "id": "gsP5R-B"
+      "id": "kZHAuKW"
     },
     {
-      "description": "Nowa transakcja5",
-      "amount": 10.5,
+      "description": "sadsa",
+      "amount": 22,
       "categoryId": "2",
-      "date": "2020-02-19",
+      "date": "2020-07-12",
       "budgetId": "1",
-      "id": "EXvZu7Z"
+      "id": "RdozYY8"
     },
     {
-      "description": "Nowa transakcja5",
-      "amount": 10.5,
-      "categoryId": "3",
-      "date": "2020-02-20",
+      "description": "sadsa",
+      "amount": 11,
+      "categoryId": "4",
+      "date": "2020-07-10",
       "budgetId": "1",
-      "id": "nd_u-b5"
+      "id": "G7DzoNQ"
     },
     {
-      "description": "Nowa transakcja6",
-      "amount": 10.5,
-      "categoryId": "3",
-      "date": "2020-02-20",
+      "description": "płyn do mycia szyb",
+      "amount": 9.5,
+      "categoryId": "6",
+      "date": "2020-07-13",
       "budgetId": "1",
-      "id": "KBQrPmU"
+      "id": "2_U-OtT"
     },
     {
-      "description": "Nowa transakcja7",
-      "amount": 10.6,
-      "categoryId": "3",
-      "date": "2020-02-20",
+      "description": "sadsa",
+      "amount": 22,
+      "categoryId": "2",
+      "date": "2020-07-15",
       "budgetId": "1",
-      "id": "jHBfyjy"
+      "id": "3zm4M2W"
     }
   ]
 }

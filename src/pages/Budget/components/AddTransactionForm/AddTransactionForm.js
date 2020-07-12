@@ -46,7 +46,7 @@ function AddTransactionForm({ onSubmit = noop, categories, groupCategoriesBy }) 
                             </div>
                         )}
                     </Field>
-                    <Field name="category" validate={required}>
+                    <Field name="categoryId" validate={required}>
                         {({ input, meta }) => (
                             <div>
                                 <label>Category</label>
@@ -57,11 +57,11 @@ function AddTransactionForm({ onSubmit = noop, categories, groupCategoriesBy }) 
                             </div>
                         )}
                     </Field>
-                    <Field name="data" validate={required}>
+                    <Field name="date" validate={required}>
                         {({ input, meta }) => (
                             <div>
-                                <label>Data</label>
-                                <input {...input} type="date" placeholder="Data" />
+                                <label>Date</label>
+                                <input {...input} type="date" placeholder="Date" />
                                 {meta.error && meta.touched && <span>{meta.error}</span>}
                             </div>
                         )}

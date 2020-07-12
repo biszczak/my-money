@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useMemo } from 'react';
 import { connect } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, useHistory } from 'react-router-dom';
+
 
 import {
     fetchBudget, fetchBudgetedCategories, addTransaction
@@ -20,6 +21,7 @@ import AddTransactionForm from 'pages/Budget/components/AddTransactionForm';
 function Budget({
     commonState, budgetState, allCategories, budget,
     fetchBudget, fetchBudgetedCategories, fetchAllCategories, addTransaction }) {
+    const history = useHistory();
     useEffect(() => {
         fetchBudget(1);
         fetchBudgetedCategories(1);
@@ -32,6 +34,8 @@ function Budget({
         addTransaction({
             budgetId: budget.id,
             data: values
+        }).then(() => {
+            history.goBack();
         })
     }
     return (

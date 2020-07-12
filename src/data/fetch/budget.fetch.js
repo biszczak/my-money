@@ -10,12 +10,15 @@ export const fetchBudgetedCategories = (id) => {
     return promise;
 };
 
-export const addTransactions = ({ budgetId, data }) => {
+export const addTransaction = ({ budgetId, data }) => {
     const promise = fetch(
         `${process.env.REACT_APP_API_URL}/budgets/${budgetId}/transactions`,
         {
             method: "POST",
-            body: JSON.stringify(data)
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(data),
         }
     );
 
