@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.aside`
+@import url('${({ theme }) => theme.fonts.familyFont.import}');
+font-family: ${({ theme }) => theme.fonts.familyFont.name};
+font-weight: 300;
   background-color: rgba(0,0,0,0.5);
   position: fixed;
   height: 100%;
@@ -17,11 +20,14 @@ export const Content = styled.div`
   background: #fff;
   position: absolute;
   margin: auto;
-  width: 300px;
-  height: 300px;
+  width: 400px;
   padding: 20px;
   text-align: center;
   border-radius: 15px;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `;
 
 export const CloseIcon = styled.div`

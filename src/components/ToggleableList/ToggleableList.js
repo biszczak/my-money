@@ -15,6 +15,7 @@ const Item = ({ item, onClickHandler, isActive }) => (
                 flex-direction: column;
                 position: static;
                 margin-bottom: 10px;
+                margin-top: 0;
               }
         `}
         >

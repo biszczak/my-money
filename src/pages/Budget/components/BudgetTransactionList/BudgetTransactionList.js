@@ -61,7 +61,6 @@ function BudgetTransactionList({
                                     <CategoryIcon
                                         parentCategoryId={allCategories.map(category => {
                                             let parentId = null;
-                                            // console.log(transaction)
                                             if (category.id === transaction.categoryId) {
                                                 parentId = category.parentCategoryId
                                             }

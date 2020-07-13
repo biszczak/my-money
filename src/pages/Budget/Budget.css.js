@@ -21,5 +21,9 @@ section:nth-child(1) {
 section:nth-child(2) {
     position: relative;
     margin-top: 60px;
+
+    @media (max-width: 768px) {
+        margin-top: 0;
+      }
 }
 `

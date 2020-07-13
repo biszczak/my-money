@@ -66,24 +66,44 @@
       "id": "9",
       "name": "Restaurants and pubs",
       "parentCategoryId": "5"
+    },
+    {
+      "id": "10",
+      "name": "Books",
+      "parentCategoryId": "4"
+    },
+    {
+      "id": "11",
+      "name": "Cinema",
+      "parentCategoryId": "5"
+    },
+    {
+      "id": "12",
+      "name": "Meetings with friends",
+      "parentCategoryId": "5"
+    },
+    {
+      "id": "13",
+      "name": "Party",
+      "parentCategoryId": "5"
     }
   ],
   "budgetCategories": [
     {
       "id": "1",
-      "budget": 120.47,
+      "budget": 85,
       "categoryId": "1",
       "budgetId": "1"
     },
     {
       "id": "2",
-      "budget": 39.99,
+      "budget": 50,
       "categoryId": "2",
       "budgetId": "1"
     },
     {
       "id": "3",
-      "budget": 723,
+      "budget": 820,
       "categoryId": "3",
       "budgetId": "1"
     },
@@ -104,6 +124,36 @@
       "budget": 80,
       "categoryId": "6",
       "budgetId": "1"
+    },
+    {
+      "id": "7",
+      "budget": 150,
+      "categoryId": "7",
+      "budgetId": "1"
+    },
+    {
+      "id": "10",
+      "budget": 120,
+      "categoryId": "10",
+      "budgetId": "1"
+    },
+    {
+      "id": "11",
+      "budget": 80,
+      "categoryId": "11",
+      "budgetId": "1"
+    },
+    {
+      "id": "12",
+      "budget": 230,
+      "categoryId": "12",
+      "budgetId": "1"
+    },
+    {
+      "id": "13",
+      "budget": 210,
+      "categoryId": "13",
+      "budgetId": "1"
     }
   ],
   "budgets": [
@@ -115,124 +165,60 @@
   ],
   "transactions": [
     {
-      "id": "1",
-      "description": "Internet provider",
-      "amount": 120.47,
-      "categoryId": "1",
-      "date": "2019-12-15T20:39:41.768Z",
-      "budgetId": "1"
-    },
-    {
-      "id": "2",
-      "description": "Mobile network provider",
-      "amount": 39.99,
-      "categoryId": "2",
-      "date": "2019-12-10T13:33:21.768Z",
-      "budgetId": "1"
-    },
-    {
-      "id": "3",
-      "description": "Weekly shoping",
-      "amount": 23.88,
-      "categoryId": "6",
-      "date": "2019-12-17T15:41:01.768Z",
-      "budgetId": "1"
-    },
-    {
-      "id": "4",
-      "description": "Weekly shoping #2",
-      "amount": 12.48,
-      "categoryId": "6",
-      "date": "2019-12-17T12:41:01.768Z",
-      "budgetId": "1"
-    },
-    {
-      "id": "5",
-      "description": "Dinner in a restaurant",
-      "amount": 35.68,
-      "categoryId": "null",
-      "date": "2019-12-22T15:33:11.768Z",
-      "budgetId": "1"
-    },
-    {
-      "id": "5",
-      "description": "Grocery shopping #1",
-      "amount": 12.38,
-      "categoryId": "5",
-      "date": "2019-12-18T13:38:41.768Z",
-      "budgetId": "1"
-    },
-    {
-      "description": "Default Agile Workflow",
-      "amount": 123,
-      "categoryId": "7",
-      "date": "2020-02-13",
-      "budgetId": "1",
-      "id": "p1tYW2Q"
-    },
-    {
-      "description": "Nowa transakcja",
-      "amount": 10.5,
+      "description": "Czynsz za mieszkanie",
+      "amount": 820,
       "categoryId": "3",
-      "date": "2020-02-19",
-      "budgetId": "1",
-      "id": "aqq7G-0"
-    },
-    {
-      "description": "Nowa transakcja1",
-      "amount": 10.5,
-      "categoryId": "3",
-      "date": "2020-02-19",
-      "budgetId": "1",
-      "id": "GNERO_K"
-    },
-    {
-      "description": "Nowa transakcja2",
-      "amount": 10.5,
-      "categoryId": "3",
-      "date": "2020-02-19",
-      "budgetId": "1",
-      "id": "M9B9puJ"
-    },
-    {
-      "description": "dsadsad",
-      "amount": 222,
-      "categoryId": "9",
       "date": "2020-07-13",
       "budgetId": "1",
-      "id": "kZHAuKW"
+      "id": 1
     },
     {
-      "description": "sadsa",
-      "amount": 22,
-      "categoryId": "2",
+      "description": "Zakupy #1",
+      "amount": 5,
+      "categoryId": "5",
       "date": "2020-07-12",
       "budgetId": "1",
-      "id": "RdozYY8"
+      "id": 2
     },
     {
-      "description": "sadsa",
-      "amount": 11,
-      "categoryId": "4",
+      "description": "Płyn do mycia szyb",
+      "categoryId": "6",
+      "amount": 13.85,
       "date": "2020-07-10",
       "budgetId": "1",
-      "id": "G7DzoNQ"
+      "id": 3
     },
     {
-      "description": "płyn do mycia szyb",
-      "amount": 9.5,
-      "categoryId": "6",
-      "date": "2020-07-13",
+      "description": "Książka JavaScript",
+      "amount": 45.5,
+      "categoryId": "10",
+      "date": "2020-07-09",
       "budgetId": "1",
-      "id": "2_U-OtT"
+      "id": 4
     },
     {
-      "description": "sadsa",
-      "amount": 22,
-      "categoryId": "2",
-      "date": "2020-07-15",
+      "description": "Sobotnie wyjście ze znajomymi",
+      "amount": 98.63,
+      "categoryId": "12",
+      "date": "2020-07-11",
       "budgetId": "1",
-      "id": "3zm4M2W"
+      "id": 5
+    },
+    {
+      "description": "Tankowanie",
+      "amount": 90,
+      "categoryId": "7",
+      "date": "2020-07-07",
+      "budgetId": "1",
+      "id": 6
+    },
+    {
+      "description": "Wypożyczenie hulajnogi",
+      "amount": 23,
+      "categoryId": "77",
+      "date": "2020-07-01",
+      "budgetId": "1",
+      "id": 6
     }
   ]
 }

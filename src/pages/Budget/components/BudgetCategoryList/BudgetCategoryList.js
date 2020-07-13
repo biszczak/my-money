@@ -68,8 +68,8 @@ function BudgetCategoryList({
     );
 
 
-    const totalSpent = useMemo(() =>
-        budget.transactions
+    const totalSpent = useMemo(
+        () => budget.transactions
             .reduce((acc, transaction) => acc + transaction.amount, 0),
         [budget.transactions]
     );
@@ -91,11 +91,10 @@ function BudgetCategoryList({
     );
 
     const notBudgetedTransactions = useMemo(
-        () => budget.transactions
-            .filter(transaction => {
-                return !budgetedCategories
-                    .find(budgetedCategory => budgetedCategory.id === transaction.categoryId)
-            }),
+        () => budget.transactions.filter(transaction => {
+            return !budgetedCategories
+                .find(budgetedCategory => budgetedCategory.id === transaction.categoryId)
+        }),
         [budget.transactions, budgetedCategories]
     );
     const notBudgetedExpenses = useMemo(

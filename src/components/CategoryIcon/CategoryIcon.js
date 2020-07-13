@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import 'styled-components/macro';
 import {
     RiWifiLine,
@@ -9,7 +9,11 @@ import {
     RiShoppingBasketLine,
     RiPaintLine,
     RiGasStationLine,
-    RiBookmarkLine
+    RiBookmarkLine,
+    RiMovie2Line,
+    RiWechatLine,
+    RiMusicLine,
+    RiBook2Line
 } from "react-icons/ri";
 import { iconsColors } from 'utils/theme';
 
@@ -46,6 +50,18 @@ function CategoryIcon({ name, parentCategoryId }) {
             break;
         case 'Fuel':
             icon = <RiGasStationLine />;
+            break;
+        case 'Cinema':
+            icon = <RiMovie2Line />;
+            break;
+        case 'Meetings with friends':
+            icon = <RiWechatLine />;
+            break;
+        case 'Party':
+            icon = <RiMusicLine />;
+            break;
+        case 'Books':
+            icon = <RiBook2Line />;
             break;
 
         default:

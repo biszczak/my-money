@@ -3,8 +3,6 @@ import React, { useMemo } from 'react';
 import { ParentCategory as Root, CategoryAmount } from './BudgetCategoryList.css';
 import { formatCurrency } from 'utils';
 
-import { FaBeer } from 'react-icons/fa';
-
 function ParentCategory({ name, onClick, categories, transactions, amount }) {
     const categoryLeftValue = useMemo(() => {
         if (!!amount) return null;
@@ -18,8 +16,9 @@ function ParentCategory({ name, onClick, categories, transactions, amount }) {
 
         const parentCategoryTransactions = transactions
             .filter(transaction => {
-                categories.find(category => category.categoryId === transaction.categoryId)
+                return categories.find(category => category.categoryId === transaction.categoryId)
             });
+
         const spentOnParentCategory = parentCategoryTransactions
             .reduce((acc, transaction) => acc + transaction.amount, 0);
 
